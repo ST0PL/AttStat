@@ -5,8 +5,6 @@ using MigraDoc.DocumentObjectModel;
 using MigraDoc.Rendering;
 using MigraDoc.DocumentObjectModel.Tables;
 using System.Diagnostics;
-using MigraDoc.DocumentObjectModel.IO;
-using MigraDoc.Rendering.Windows;
 using Microsoft.Win32;
 using System.IO;
 
@@ -155,7 +153,7 @@ namespace AttStat.ViewModels
                 row.Cells[disciplines.Length + 1].AddParagraph("Средний рейтинг");
                 for (int i = 0; i < disciplines.Length + 2; i++)
                 {
-                    row.Cells[i].Shading.Color = Color.Parse("#807d80");
+                    row.Cells[i].Shading.Color = Color.Parse("#d8d8d8");
                 }
                 for (int i = 0; i < dataStruct.Count; i++)
                 {
