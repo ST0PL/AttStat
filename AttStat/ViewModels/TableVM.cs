@@ -165,6 +165,8 @@ namespace AttStat.ViewModels
         {
             FacultyId = 0;
             await _context.DisposeAsync();
+            if (!_context.IsDisposed)
+                _context.Dispose();
             _context = new SystemDataContext();
             try
             {
@@ -174,6 +176,14 @@ namespace AttStat.ViewModels
             }
             catch (Exception ex) { new AlertWindow("Ошибка при работе с базой данных", ex.Message).Show(); }
         }
+        [RelayCommand]
+        void UpdateData()
+        {
+            if (!_context.IsDisposed)
+                _context.Dispose();
+            _context = new SystemDataContext();
+            ApplyFilters();
+        }
         void ApplyFilters()
         {
             try
@@ -181,6 +191,7 @@ namespace AttStat.ViewModels
                 Attestations = _context.Attestations
                         .Where(a => (a.Score.Value < 25 || !OnlyLowRating) && (a.StudentNavigation.GroupNavigation.SpecializationNavigation.Faculty == _facultyId || _facultyId == 0)
                         && (a.StudentNavigation.Group == _groupId || _groupId == 0) && (a.Discipline == _disciplineId || _disciplineId == 0)).ToList();
+                OrderBy(OrderId);
                 Count = Attestations.Count;
                 Average = Count > 0 ? Math.Round((double)Attestations.Select(a => a.Score).Aggregate((s1, s2) => s1 + s2) / Count, 2) : 0;
             }

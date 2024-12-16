@@ -95,7 +95,7 @@
                                      Padding="10"
                                      Foreground="Black"
                                      ImageSource="{StaticResource refreshIcon}"
-                                     Command="{Binding LoadDataCommand}"
+                                     Command="{Binding UpdateDataCommand}"
                                      Text="Обновить"
                                      Width="110"/>
                 <controls:IconButton Background="#00a19a"

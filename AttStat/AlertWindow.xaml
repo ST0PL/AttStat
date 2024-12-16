@@ -10,7 +10,7 @@
         Cursor="Hand"
         AllowsTransparency="True"
         Background="Transparent"
-        Title="AlertWindow" Height="200" Width="400">
+        Title="Уведомление" Height="200" Width="400">
     <Border Background="White"
             BorderBrush="#2e3439"
             BorderThickness="3"

@@ -6,6 +6,12 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
+    <AssemblyVersion>1.1.0</AssemblyVersion>
+    <FileVersion>1.1.0</FileVersion>
+    <Description>Программное средство для обработки данных аттестации</Description>
+    <Copyright>© ST0PL</Copyright>
+    <Title>Атт. Стат АлтГТУ</Title>
+    <Version>1.1.0</Version>
   </PropertyGroup>
 
   <ItemGroup>

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace AttStat.Db.Models;
+﻿namespace AttStat.Db.Models;
 
 public partial class Faculty
 {

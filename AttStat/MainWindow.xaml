@@ -12,7 +12,7 @@
         Background="Transparent"
         AllowsTransparency="True"
         WindowStartupLocation="CenterScreen"
-        Title="MainWindow" Height="675" Width="1280">
+        Title="Аттестационная статистика АлтГТУ" Height="675" Width="1280">
     <Window.DataContext>
         <vm:MainVM/>
     </Window.DataContext>

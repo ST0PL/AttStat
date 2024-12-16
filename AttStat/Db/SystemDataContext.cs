@@ -5,6 +5,7 @@ namespace AttStat;
 
 public partial class SystemDataContext : DbContext
 {
+    public bool IsDisposed { get; set; }
     public SystemDataContext()
     {
     }
@@ -169,4 +170,9 @@ public partial class SystemDataContext : DbContext
     }
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+    public override void Dispose()
+    {
+        IsDisposed = true;
+        base.Dispose();
+    }
 }
