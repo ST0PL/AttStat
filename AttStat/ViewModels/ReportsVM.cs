@@ -146,6 +146,7 @@ namespace AttStat.ViewModels
                     table.AddColumn("1cm");
                 table.AddColumn("2cm");
                 Row row = table.AddRow();
+                row.VerticalAlignment = VerticalAlignment.Center;
                 row.HeadingFormat = true;
                 row.Format.Font.Bold = true;
                 row.Cells[0].AddParagraph("");
@@ -159,6 +160,7 @@ namespace AttStat.ViewModels
                 for (int i = 0; i < dataStruct.Count; i++)
                 {
                     row = table.AddRow();
+                    row.VerticalAlignment = VerticalAlignment.Center;
                     row.Cells[0].AddParagraph(dataStruct[i].Key);
                     row.Cells[0].Format.Alignment = ParagraphAlignment.Left;
                     for (int j = 0; j < disciplines.Length; j++)
